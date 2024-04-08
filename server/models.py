@@ -14,3 +14,14 @@ class Newsletter(db.Model, SerializerMixin):
 
     def __repr__(self):
         return f'<Newsletter {self.title}, published at {self.published_at}.>'
+    
+class Plant(db.Model, SerializerMixin):
+    __tablename__ = 'plants'
+
+    id = db.Column(db.Integer, primary_key=True)
+    image = db.Column(db.String)
+    price= db.Column(db.String)
+    
+
+    def __repr__(self):
+        return f'<Plant {self.image}, published at {self.price}.>'
